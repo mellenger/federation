@@ -1,0 +1,169 @@
+/* Typography */
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeue-Thin.eot');
+	src: url('../fonts/BebasNeue-Thin.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BebasNeue-Thin.woff') format('woff'),
+		url('../fonts/BebasNeue-Thin.ttf') format('truetype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeueLight.eot');
+	src: url('../fonts/BebasNeueLight.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BebasNeueLight.woff') format('woff'),
+		url('../fonts/BebasNeueLight.ttf') format('truetype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue Book';
+	src: url('../fonts/BebasNeueBook.eot');
+	src: url('../fonts/BebasNeueBook.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BebasNeueBook.woff') format('woff'),
+		url('../fonts/BebasNeueBook.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeueRegular.eot');
+	src: url('../fonts/BebasNeueRegular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BebasNeueRegular.woff') format('woff'),
+		url('../fonts/BebasNeueRegular.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	src: url('../fonts/BebasNeueBold.eot');
+	src: url('../fonts/BebasNeueBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/BebasNeueBold.woff') format('woff'),
+		url('../fonts/BebasNeueBold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+$bebas: 'Bebas Neue';
+$thin: 100;
+$light: 300;
+$book: normal;
+$regular: 600;
+$bold: bold;
+
+html {
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern";
+	-moz-font-feature-settings: "kern=1";
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: $bebas;
+  font-weight: $regular;
+  line-height: calc(58/48);
+  font-size: 16px;
+  @media only screen and (min-width: $breakpoint)  {
+    font-size: 20px;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: $book;
+  letter-spacing: -1px;
+  @media only screen and (min-width: $breakpoint)  {
+    font-size: 64px;
+  }
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: $book;
+  letter-spacing: -0.5px;
+  @media only screen and (min-width: $breakpoint)  {
+    font-size: 48px;
+  }
+
+  &.star {
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      background: url('../images/star-shooting.svg') no-repeat center center;
+      background-size: contain;
+      height: 130px;
+      width: 20px;
+    }
+  }
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: $regular;
+  letter-spacing: -1px;
+
+  @media only screen and (min-width: $breakpoint)  {
+    font-size: 36px;
+  }
+
+  &.star {
+    position: relative;
+    padding-top: 15px;
+
+    &:before {
+      content: '';
+      display: block;
+      background: url('../images/star-gold.svg') no-repeat center center;
+      background-size: contain;
+      height: 45px;
+      width: 45px;
+      margin: 15px auto;
+    }
+  }
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: $regular;
+  letter-spacing: 0;
+  text-transform: uppercase;
+
+  @media only screen and (min-width: $breakpoint)  {
+    font-size: 24px;
+    letter-spacing: -1px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $white;
+
+  &:hover, &:focus, &:active {
+    color: $gold;
+  }
+}
+
+.strong {
+  font-weight: $regular;
+}
+
+.underline {
+  text-decoration: underline;
+}

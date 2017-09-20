@@ -1,0 +1,425 @@
+/**
+ * Federation Stylesheet *
+ **/
+
+/* Imports */
+@import '_variables';
+@import '_type';
+
+/* Base */
+html {
+  background: $white;
+  color: $black;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  * {
+    outline: none;
+  }
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Tools */
+.text-center {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+a[href^='mailto'] {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+/* General Layout */
+section {
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  padding: $half-spacer;
+  @media only screen and (min-width: $breakpoint)  {
+    padding: $spacer;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+
+    &.max {
+      max-width: $container-max;
+      min-width: $container-min;
+      width: 75%;
+    }
+  }
+
+  &.full-height {
+    .container {
+      min-height: 100vh;
+    }
+  }
+  &.dark {
+    background: $black;
+    color: $white;
+  }
+  &.dark.bg {
+    background: $black url('../images/bg.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &.light {
+    background: $white;
+    color: $black;
+  }
+
+  .block {
+    user-select: none;
+  }
+
+  .half {
+    width: 50%;
+
+    &.full-mobile {
+      width: 100%;
+      @media only screen and (min-width: $breakpoint)  {
+        width: 50%;
+      }
+    }
+  }
+}
+
+/* Hero */
+section.hero {
+  height: 100vh;
+  padding-top: 0;
+
+  .container {
+    z-index: 2;
+
+    h2 {
+      margin-top: 0;
+      font-weight: $regular;
+    }
+    .logo {
+      width: 80%;
+      @media only screen and (min-width: $breakpoint)  {
+        width: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+
+  .phone {
+    position: absolute;
+    top: $spacer;
+    right: $spacer;
+    padding: 8px 15px 5px;
+    background: $gray;
+    color: $white;
+    z-index: 2;
+
+    .icon-email {
+      display: inline-block;
+      width: 15px;
+      height: auto;
+      margin-left: 15px;
+      @media only screen and (min-width: $breakpoint)  {
+        width: 20px;
+      }
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  .block {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 75%;
+    z-index: 1;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    background: url('../images/stars-vertical.svg') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: calc(25%);
+    right: $spacer;
+    height: 130px;
+    width: 15px;
+    @media only screen and (min-width: $breakpoint)  {
+      top: calc(50% - 65px);
+    }
+  }
+}
+
+/* Scroll Tip */
+.scroll-tip {
+  position: absolute;
+  bottom: -70px;
+  left: calc(50% - 8px);
+  width: 16px;
+  height: 210px;
+  z-index: 2;
+
+  svg {
+    text {
+      fill: $gray;
+    }
+    path {
+      stroke: $gray;
+    }
+  }
+}
+
+/* Section: Intro */
+section.intro {
+
+  .container {
+    align-items: flex-start;
+  }
+
+  h2 {
+    margin-top: $spacer;
+    padding-top: 100px;
+    white-space: pre-line;
+    z-index: 2;
+    position: relative;
+
+    &:before {
+      top: -50px;
+      left: 0;
+    }
+  }
+
+  .block {
+    display: block;
+    position: absolute;
+    top: 25%;
+    right: 0;
+    bottom: 25%;
+    width: auto;
+    height: 50%;
+    z-index: 1;
+    @media only screen and (min-width: $breakpoint)  {
+      top: 0;
+      bottom: 0;
+      height: 100%;
+    }
+  }
+}
+
+/* Section: Delivery */
+section.delivery {
+
+  .container {
+    flex-flow: row wrap;
+
+    h1 {
+      font-weight: $book;
+    }
+  }
+
+  &:before {
+    content: '';
+    display: block;
+    background: url('../images/star-shooting.svg') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 10px);
+    height: 130px;
+    width: 20px;
+  }
+
+  .half {
+    padding: $half-spacer;
+  }
+}
+
+/* Section: How */
+section.how {
+
+  h2 {
+    margin-top: $spacer;
+    padding-top: 100px;
+
+    &:first-child {
+      &:before {
+        top: -180px;
+        right: 0;
+        background: url('../images/star-shooting-gold-long.svg') no-repeat center center;
+        background-size: contain;
+        height: 260px;
+        width: 20px;
+        @media only screen and (min-width: $breakpoint)  {
+          left: 0;
+          top: -210px;
+        }
+      }
+    }
+    &:nth-child(2) {
+      &:before {
+        top: -$spacer;
+        background: url('../images/star-shooting-gold.svg') no-repeat center center;
+        background-size: contain;
+      }
+    }
+  }
+
+  .block {
+    display: block;
+    position: absolute;
+    top: -13%;
+    left: 0;
+    width: auto;
+    height: 40.5%;
+    z-index: 1;
+
+    @media only screen and (min-width: $breakpoint)  {
+      top: -20%;
+      height: 61.5%;
+    }
+  }
+}
+
+/* Section: Who */
+section.who {
+  padding: $spacer 0;
+
+  .container {
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+
+    .stars-horizontal {
+      width: 500px;
+      height: auto;
+    }
+    .stars {
+      width: 50%;
+      max-width: 200px;
+      height: auto;
+    }
+
+    h2 {
+      &:after {
+        content: '';
+        display: block;
+        width: 50px;
+        height: 1px;
+        background-color: $gray;
+        margin: 15px auto;
+      }
+    }
+  }
+  h1 {
+    margin-top: $spacer;
+    padding-top: $spacer;
+    padding-bottom: $spacer;
+    border-top: 1px solid $gold;
+    border-bottom: 1px solid $gold;
+  }
+  .block {
+    display: block;
+    position: absolute;
+    top: -21%;
+    right: 0;
+    width: auto;
+    height: 50%;
+    z-index: 1;
+
+    @media only screen and (min-width: $breakpoint)  {
+      height: 121%;
+      top: -50%;
+    }
+  }
+}
+
+/* Section: Services */
+section.services {
+  .container {
+    flex-flow: row wrap;
+
+    .backdrop {
+      user-select: none;
+      font-size: 75px;
+      font-weight: $bold;
+      position: absolute;
+      z-index: -1;
+      color: #F2F2F2;
+      max-width: 100%;
+      overflow-x: hidden;
+
+      @media only screen and (min-width: $breakpoint)  {
+        font-size: 288px;
+      }
+    }
+
+    .bottom {
+      h4 {
+        position: relative;
+
+        &:before {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 1px;
+          background-color: $gray;
+          margin: 15px auto;
+        }
+      }
+      a.gold {
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+/* Footer */
+section.footer {
+  padding-left: 0;
+  padding-right: 0;
+
+  .container {
+    max-width: none;
+  }
+
+  img {
+    width: 200px;
+    padding-top: $spacer;
+    margin-bottom: $spacer;
+  }
+  .copyright {
+    width: 100%;
+    font-family: sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    padding-bottom: $spacer;
+    border-bottom: 1px solid $gold;
+  }
+}

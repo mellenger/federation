@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="210px" viewBox="0 0 11 210" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-714.000000, -647.000000)">
+            <g id="Group-10" transform="translate(711.000000, 646.000000)">
+                <path d="M8.5,76.5 L8.5,209.593952" id="Line" stroke="#D6D6D6" stroke-linecap="square"></path>
+                <text id="SCROLL" transform="translate(8.000000, 24.500000) rotate(-90.000000) translate(-8.000000, -24.500000) " font-family="AndaleMono, Andale Mono" font-size="14" font-weight="normal" letter-spacing="-0.373333305" fill="#FFFFFF">
+                    <tspan x="-16.5" y="29.5">SCROLL</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

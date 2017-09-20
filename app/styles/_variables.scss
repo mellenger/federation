@@ -1,0 +1,17 @@
+/* Variables */
+
+/* Colours */
+$gray: #9B9B9B;
+$black: #2F3031;
+$gold: #CCC613;
+$white: #FDFBF8;
+
+.gold { color: $gold; }
+.black { color: $black; }
+
+/* Grid */
+$half-spacer: 25px;
+$spacer: 50px;
+$breakpoint: 680px;
+$container-min: 265px;
+$container-max: 850px;

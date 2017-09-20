@@ -1,8 +1,9 @@
 ## Quickstart
 
-Clone the repsitory
+- Clone the repsitory
 - `gulp serve` - to run a local development copy
 - `gulp serve:dist` - to create a /dist production-ready folder
+- Drop in the Google Analytics UA code on line 162 of index.html
 
 Be sure to look over the [installation docs](docs/install.md) to verify your environment is prepared to run WSK.
 Once you have verified that your system can run WSK, check out the [commands](docs/commands.md) available to get started.

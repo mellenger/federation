@@ -1,6 +1,6 @@
 {
-  "name": "Web Starter Kit",
-  "short_name": "WSK",
+  "name": "Federation",
+  "short_name": "Fed",
   "icons": [{
         "src": "images/touch/apple-touch-icon.png",
         "sizes": "152x152",
